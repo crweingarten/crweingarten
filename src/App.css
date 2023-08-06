@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+.container {
+  display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.crw {
+  background-color: #c9d1e2;
+  padding: 10px;
   min-height: 100vh;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 150px;
+  color: black;
+  width: 65%;
+  white-space: nowrap
 }
 
-.App-link {
-  color: #61dafb;
+.letter-tweak {
+  color: grey
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.display-box {
+  background-color: #c9d1e2;
+  display: flex;
+  width: 35%
+}
+
+@-webkit-keyframes bob-on-hover {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
   }
+
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes bob-on-hover {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@-webkit-keyframes bob-on-hover-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes bob-on-hover-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+.bob-on-hover {
+  display: inline-block;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.bob-on-hover:hover,
+.bob-on-hover:focus,
+.bob-on-hover:active {
+  -webkit-animation-name: bob-on-hover-float, bob-on-hover;
+  animation-name: bob-on-hover-float, bob-on-hover;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
 }
